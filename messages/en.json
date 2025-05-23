@@ -14,5 +14,11 @@
     "basedOn": "Based on SemiBlack theme",
     "author": "Author",
     "rewrittenBy": "Rewritten to Next.js by"
+  },
+  "news": {
+    "loadingImage": "Loading...",
+    "missingImage": "Image not found",
+    "comments": "Comments to this post",
+    "readMore": "(read more...)"
   }
 }

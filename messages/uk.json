@@ -14,5 +14,11 @@
     "basedOn": "Засновано на темі SemiBlack",
     "author": "Автор",
     "rewrittenBy": "Переписано на Next.js"
+  },
+  "news": {
+    "loadingImage": "Завантаження...",
+    "missingImage": "Зображення відсутнє",
+    "comments": "Коментарів до цього запису",
+    "readMore": "(далі...)"
   }
 }

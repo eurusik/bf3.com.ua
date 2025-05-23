@@ -76,6 +76,31 @@ body {
   }
 }
 
+/* Common Font Styles */
+.segoe-ui-font {
+  font-family: var(--font-segoe-ui), "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.segoe-ui-font-light {
+  font-family: var(--font-segoe-ui-light), "Segoe UI Light", "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+/* Image Styles */
+img {
+  max-height: auto;
+  height: auto;
+}
+
+img.thumb {
+  height: 100px;
+  margin-top: 2px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 2px solid #eee;
+  object-fit: cover;
+}
+
 /* Footer Styles */
 .footer-font {
   font-family: "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
@@ -132,7 +157,7 @@ body {
       "author navigation";
     justify-items: start;
     text-align: left;
-    padding: 0 2.5rem;
+    padding: 0 3rem;
     align-items: start;
   }
 

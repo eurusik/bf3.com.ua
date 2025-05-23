@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans } from "next/font/google";
+import { Noto_Sans, Inter } from "next/font/google";
 import "../globals.css";
 import Footer from "@/src/components/Footer";
 import Container from "@/src/components/Container";
@@ -11,6 +11,13 @@ const notoSans = Noto_Sans({
   weight: ["400", "700"],
   subsets: ["latin", "cyrillic", "cyrillic-ext"],
   variable: "--font-noto-sans",
+  display: "swap",
+});
+
+const inter = Inter({
+  weight: ["300", "400"],
+  subsets: ["latin", "cyrillic", "cyrillic-ext"],
+  variable: "--font-segoe-ui",
   display: "swap",
 });
 
@@ -42,7 +49,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${notoSans.variable} antialiased`}
+        className={`${notoSans.variable} ${inter.variable} antialiased`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Container className="mt-8 mb-4">
