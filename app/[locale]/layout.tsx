@@ -30,11 +30,12 @@ const locales = ['uk', 'en'];
 
 export default async function LocaleLayout({
   children,
-  params
+  params: paramsPromise
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const params = await paramsPromise;
   const locale = params.locale;
   
   if (!locales.includes(locale)) notFound();

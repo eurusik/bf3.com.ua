@@ -5,11 +5,16 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "generate": "faust generatePossibleTypes",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.13.8",
+    "@faustwp/cli": "^3.2.3",
+    "@faustwp/core": "^3.2.3",
     "@icons-pack/react-simple-icons": "^12.8.0",
+    "graphql": "^16.11.0",
     "lucide-react": "^0.511.0",
     "next": "15.1.8",
     "next-intl": "^4.1.0",
