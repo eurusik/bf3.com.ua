@@ -59,7 +59,7 @@ function SteamIcon() {
 
 function SocialIcons() {
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-2 flex-shrink-0">
       <FacebookIcon />
       <TwitterIcon />
       <YoutubeIcon />
@@ -69,22 +69,24 @@ function SocialIcons() {
 }
 
 export default function Header() {
-  const t = useTranslations();
+  const t = useTranslations()
+
   return (
     <header className="w-full text-white">
       <div className="px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo and Title */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 md:space-x-3 max-w-[75%] md:max-w-none">
             {/* Play Button Triangle */}
-            <div className="w-8 h-8 flex items-center justify-center">
-              <Swords className="w-8 h-8" />
+            <div className="flex-shrink-0">
+              <Swords className="w-6 h-6 md:w-8 md:h-8" />
             </div>
 
             {/* Title */}
-            <div className="font-segoe">
-              <span className="text-xl md:text-2xl font-light">
-                {t("header.title")} <sup className="text-sm font-normal">{t("header.version")}</sup> — {t("header.slogan")}
+            <div className="font-segoe truncate">
+              <span className="text-lg md:text-2xl font-light whitespace-normal md:whitespace-nowrap">
+                {t("header.title")} <sup className="text-xs md:text-sm font-normal">{t("header.version")}</sup>
+                <span className="hidden md:inline"> — {t("header.slogan")}</span>
               </span>
             </div>
           </div>
@@ -92,6 +94,8 @@ export default function Header() {
           {/* Right - Social Icons */}
           <SocialIcons />
         </div>
+
+        {/* Слоган показується тільки на десктопі */}
 
         {/* Bottom Line */}
         <div className="w-full block float-left border-t border-[#333] mt-3"></div>
