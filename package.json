@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@apollo/client": "^3.13.8",
+    "@apollo/experimental-nextjs-app-support": "^0.12.2",
     "@faustwp/cli": "^3.2.3",
     "@faustwp/core": "^3.2.3",
+    "@faustwp/experimental-app-router": "^0.6.0",
     "@icons-pack/react-simple-icons": "^12.8.0",
     "graphql": "^16.11.0",
     "lucide-react": "^0.511.0",

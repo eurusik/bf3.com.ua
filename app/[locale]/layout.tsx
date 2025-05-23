@@ -6,6 +6,7 @@ import Container from "@/src/components/Container";
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import Header from "@/src/components/Header";
+import { FaustProvider } from "@faustwp/experimental-app-router/ssr";
 
 const notoSans = Noto_Sans({
   weight: ["400", "700"],
@@ -52,15 +53,17 @@ export default async function LocaleLayout({
       <body
         className={`${notoSans.variable} ${inter.variable} antialiased`}
       >
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Container className="mt-8 mb-4">
-            <Header />
-            <main className="min-h-screen">
-              {children}
-            </main>
-          </Container>
-          <Footer />
-        </NextIntlClientProvider>
+        <FaustProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Container className="mt-8 mb-4">
+              <Header />
+              <main className="min-h-screen">
+                {children}
+              </main>
+            </Container>
+            <Footer />
+          </NextIntlClientProvider>
+        </FaustProvider>
       </body>
     </html>
   );
