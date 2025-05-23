@@ -1,28 +1,44 @@
 "use client"
 
-import { Twitter, Search, Swords } from "lucide-react"
+import { Search, Swords } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { SiDiscord, SiX } from "@icons-pack/react-simple-icons"
+import socialLinks from "@/src/config/social-links"
 
 function TwitterIcon() {
   return (
     <a
-      href="http://twitter.com/playplanet_ua"
+      href={socialLinks.twitter}
       target="_blank"
       rel="noopener noreferrer"
       className="w-8 h-8 flex items-center justify-center bg-[#000] rounded hover:bg-[#101010] transition-colors"
     >
-      <Twitter className="w-4 h-4 text-white" />
+      <SiX className="w-4 h-4 text-white" />
     </a>
   )
 }
 
 function SearchIcon() {
   return (
-    <button
+    <a
+      href={socialLinks.search}
       className="w-8 h-8 flex items-center justify-center bg-[#000] rounded hover:bg-[#101010] transition-colors"
     >
       <Search className="w-4 h-4 text-white" />
-    </button>
+    </a>
+  )
+}
+
+function DiscordIcon() {
+  return (
+    <a
+      href={socialLinks.discord}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-8 h-8 flex items-center justify-center bg-[#000] rounded hover:bg-[#101010] transition-colors"
+    >
+      <SiDiscord className="w-4 h-4 text-white" />
+    </a>
   )
 }
 
@@ -32,6 +48,7 @@ function SocialIcons() {
     <div className="flex items-center space-x-2 flex-shrink-0">
       <SearchIcon />
       <TwitterIcon />
+      <DiscordIcon />
     </div>
   )
 }
