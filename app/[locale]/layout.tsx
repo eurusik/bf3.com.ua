@@ -1,19 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "../globals.css";
 import Footer from "@/src/components/Footer";
 import Container from "@/src/components/Container";
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
+import Header from "@/src/components/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const notoSans = Noto_Sans({
+  weight: ["400", "700"],
+  subsets: ["latin", "cyrillic", "cyrillic-ext"],
+  variable: "--font-noto-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -44,15 +42,16 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${notoSans.variable} antialiased`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Container className="mt-8 mb-4">
+            <Header />
             <main className="min-h-screen">
               {children}
             </main>
-            <Footer />
           </Container>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

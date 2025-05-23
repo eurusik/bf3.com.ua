@@ -57,8 +57,8 @@ function Navigation() {
 
 export default function Footer() {
   return (
-    <footer className="w-full mt-8 pb-4 bg-black text-white">
-      <div className="container mx-auto px-4 py-6">
+    <footer className="w-full mt-8 pb-4 text-white">
+      <div className="main-container w-full max-w-[990px] mx-auto px-4 py-6">
         <div className="footer-grid">
           <AuthorInfo />
           <Copyright />
