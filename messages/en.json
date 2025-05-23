@@ -1,0 +1,13 @@
+{
+  "footer": {
+    "copyright": "© 2011-{year} BF3.com.ua. All rights reserved.",
+    "copyRequirement": "When copying, active link is required!",
+    "about": "About",
+    "contacts": "Contacts",
+    "ads": "Advertising",
+    "partners": "Partners",
+    "basedOn": "Based on 2012 theme",
+    "author": "Author",
+    "rewrittenBy": "Rewritten to Next.js by"
+  }
+}

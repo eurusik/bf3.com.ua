@@ -17,5 +17,140 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  background-image: url("/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-color: #000000;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main Container Styles */
+.main-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-container {
+    max-width: 990px;
+    padding: 0;
+  }
+}
+
+.frame {
+  width: 100%;
+  background-image: url("/images/bg_r.png");
+  background-repeat: repeat;
+  padding: 15px 10px 15px 10px;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .frame {
+    padding: 20px 15px 15px 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .frame {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px 15px 15px 15px;
+  }
+}
+
+/* Footer Styles */
+.footer-font {
+  font-family: "Segoe UI", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  text-align: right;
+}
+
+.footer-font a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-font a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Grid Layout */
+.footer-grid {
+  display: grid;
+  gap: 1.5rem;
+  font-size: 0.8rem;
+
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "copyright"
+    "navigation"
+    "author";
+  justify-items: center;
+  text-align: center;
+}
+
+.footer-grid .copyright {
+  grid-area: copyright;
+}
+
+.footer-grid .navigation {
+  grid-area: navigation;
+}
+
+.footer-grid .navigation .flex {
+  justify-content: center;
+}
+
+.footer-grid .author-info {
+  grid-area: author;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "author copyright"
+      "author navigation";
+    justify-items: start;
+    text-align: left;
+    padding: 0 2.5rem;
+    align-items: start;
+  }
+
+  .footer-grid .author-info {
+    justify-self: start;
+    align-self: start;
+    text-align: left;
+  }
+
+  .footer-grid .copyright {
+    justify-self: end;
+    text-align: right;
+  }
+
+  .footer-grid .navigation {
+    justify-self: end;
+    text-align: right;
+    margin-top: 1rem;
+  }
+
+  .footer-grid .navigation .flex {
+    justify-content: flex-end;
+  }
 }
