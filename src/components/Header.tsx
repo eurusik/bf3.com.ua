@@ -30,8 +30,8 @@ function SearchIcon() {
 function SocialIcons() {
   return (
     <div className="flex items-center space-x-2 flex-shrink-0">
-      <TwitterIcon />
       <SearchIcon />
+      <TwitterIcon />
     </div>
   )
 }
