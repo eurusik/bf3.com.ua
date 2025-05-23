@@ -1,4 +1,9 @@
 {
+  "header": {
+    "title": "BF3.com.ua",
+    "version": "2.0",
+    "slogan": "Your Battlefield"
+  },
   "footer": {
     "copyright": "© 2011-{year} BF3.com.ua. All rights reserved.",
     "copyRequirement": "When copying, active link is required!",
@@ -6,7 +11,7 @@
     "contacts": "Contacts",
     "ads": "Advertising",
     "partners": "Partners",
-    "basedOn": "Based on 2012 theme",
+    "basedOn": "Based on SemiBlack theme",
     "author": "Author",
     "rewrittenBy": "Rewritten to Next.js by"
   }

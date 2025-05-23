@@ -1,4 +1,9 @@
 {
+  "header": {
+    "title": "BF3.com.ua",
+    "version": "2.0",
+    "slogan": "Твоє поле битви"
+  },
   "footer": {
     "copyright": "© 2011-{year} BF3.com.ua. Всі права захищені.",
     "copyRequirement": "При копіюванні, активне посилання — обов'язкове!",
