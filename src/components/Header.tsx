@@ -77,7 +77,6 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center space-x-2 md:space-x-3 max-w-[75%] md:max-w-none">
-            {/* Play Button Triangle */}
             <div className="flex-shrink-0">
               <Swords className="w-6 h-6 md:w-8 md:h-8" />
             </div>
@@ -94,8 +93,6 @@ export default function Header() {
           {/* Right - Social Icons */}
           <SocialIcons />
         </div>
-
-        {/* Слоган показується тільки на десктопі */}
 
         {/* Bottom Line */}
         <div className="w-full block float-left border-t border-[#333] mt-3"></div>
