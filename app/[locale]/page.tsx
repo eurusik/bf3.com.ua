@@ -82,6 +82,7 @@ export default async function Home() {
           thumbnail={news.thumbnail}
           categories={news.categories}
           permalink={news.permalink}
+          unoptimized={true}
         />
       ))}
     </div>
