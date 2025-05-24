@@ -19,6 +19,31 @@
     "loadingImage": "Завантаження...",
     "missingImage": "Зображення відсутнє",
     "comments": "Коментарів до цього запису",
-    "readMore": "(далі...)"
+    "readMore": "(далі...)",
+    "backToHome": "← Повернутися до списку новин"
+  },
+  "dateTime": {
+    "today": "Сьогодні",
+    "yesterday": "Вчора",
+    "ago": "тому",
+    "day": "день",
+    "days": "дні",
+    "manyDays": "днів",
+    "month": "місяць",
+    "months": "місяці",
+    "manyMonths": "місяців",
+    "year": "рік",
+    "years": "роки",
+    "manyYears": "років",
+    "hour": "година",
+    "hours": "години",
+    "manyHours": "годин",
+    "minute": "хвилина",
+    "minutes": "хвилини",
+    "manyMinutes": "хвилин",
+    "second": "секунда",
+    "seconds": "секунди",
+    "manySeconds": "секунд",
+    "justNow": "щойно"
   }
 }

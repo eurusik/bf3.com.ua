@@ -19,6 +19,31 @@
     "loadingImage": "Loading...",
     "missingImage": "Image not found",
     "comments": "Comments to this post",
-    "readMore": "(read more...)"
+    "readMore": "(read more...)",
+    "backToHome": "← Back to news list"
+  },
+  "dateTime": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "ago": "ago",
+    "day": "day",
+    "days": "days",
+    "manyDays": "days",
+    "month": "month",
+    "months": "months",
+    "manyMonths": "months",
+    "year": "year",
+    "years": "years",
+    "manyYears": "years",
+    "hour": "hour",
+    "hours": "hours",
+    "manyHours": "hours",
+    "minute": "minute",
+    "minutes": "minutes",
+    "manyMinutes": "minutes",
+    "second": "second",
+    "seconds": "seconds",
+    "manySeconds": "seconds",
+    "justNow": "just now"
   }
 }

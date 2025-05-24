@@ -1,10 +1,10 @@
 "use client"
 
 import { useTranslations } from "next-intl"
-import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
 import { MessageSquare } from "lucide-react"
+import FeaturedImage from "./FeaturedImage"
+import Categories from "./Categories"
 
 interface NewsProps {
   title: string
@@ -38,82 +38,21 @@ function NewsTitle({ title, comments, permalink }: { title: string, comments?: n
   )
 }
 
-function ImageSkeleton({ text }: { text: string }) {
-  return (
-    <div className="thumb h-[100px] w-full bg-gradient-to-r from-gray-800 to-gray-900 animate-pulse rounded-[0.8rem] border-2 border-[#333] flex items-center justify-center relative z-10">
-      <span className="text-gray-400 text-sm font-bold">{text}</span>
-    </div>
-  )
-}
-
 function NewsThumbnail({ thumbnail, title, unoptimized = false }: { thumbnail?: string, title: string, unoptimized?: boolean }) {
-  const t = useTranslations('news');
-  const [imageLoaded, setImageLoaded] = useState(false)
-  const [imageError, setImageError] = useState(false)
-  
-  useEffect(() => {
-    if (thumbnail) {
-      setImageLoaded(false);
-      setImageError(false);
-    }
-  }, [thumbnail]);
-
-  const handleImageLoad = () => {
-    setTimeout(() => {
-      setImageLoaded(true);
-    }, 100);
-  };
-
-  const handleImageError = () => {
-    setImageError(true);
-  };
-  
-  if (!thumbnail || imageError) {
-    return (
-      <div className="mb-4">
-        <ImageSkeleton text={t('missingImage')} />
-      </div>
-    );
+  if (!thumbnail) {
+    return null;
   }
   
   return (
-    <div className="mb-4 relative">
-      {!imageLoaded && (
-        <div className="absolute inset-0 z-10">
-          <ImageSkeleton text={t('loadingImage')} />
-        </div>
-      )}
-      
-      <div className={`transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}>
-        <Image 
-          src={thumbnail} 
-          alt={title} 
-          title={title}
-          width={960} 
-          height={100} 
-          className="thumb"
-          onLoad={handleImageLoad}
-          onError={handleImageError}
-          priority={true}
-          unoptimized={unoptimized}
-        />
-      </div>
-    </div>
+    <FeaturedImage
+      src={thumbnail}
+      alt={title}
+      title={title}
+      width={960}
+      height={100}
+      unoptimized={unoptimized}
+    />
   );
-}
-
-function NewsCategories({ categories }: { categories: string[] }) {
-  if (categories.length === 0) return null
-  
-  return (
-    <div id="postmeta" className="text-xs text-gray-400 pt-1">
-      <div>
-        <span className="categories">
-          {categories.join(", ")}
-        </span>
-      </div>
-    </div>
-  )
 }
 
 export default function News({
@@ -134,7 +73,7 @@ export default function News({
         <div className="text-white segoe-ui-font-light text-base" dangerouslySetInnerHTML={{ __html: content }} />
       </div>
       
-      <NewsCategories categories={categories} />
+      <Categories categories={categories} />
     </div>
   )
 }
